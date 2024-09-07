@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+
+    <div class="project">
+
+        <div class="topBody">
+
+        <h2>system</h2> 
+
+        <div class="black" id="black"></div>
+
+    <input class="one input" type="text" placeholder="title" id="title">
+
+    <div>
+
+        <input class="two input1" type="number" placeholder="price" id="price" onkeyup="getTotal()">
+        <input class="two input1" type="number" placeholder="taxes" id="taxes" onkeyup="getTotal()">
+        <input class="two input1" type="number" placeholder="ads" id="ads"  onkeyup="getTotal()">
+        <input class="two input1" type="number" placeholder= ""  id="tprice">
+        <small id="total"></small>
+    </div>
+    <input class="one input" type="number" placeholder="count" id="count">
+    <br> 
+    <input class="one input" type="text" placeholder="category" id="category">
+    <br>
+    <button class="button input" id="create">create</button>
+    <br>
+    <input onkeyup="searchItems(this.value)"  class="one input" type="text" placeholder="search" id="search"> 
+    <div id="btn"></div>
+   
+    <div> 
+        <button onclick=" moodSearch(this.id)" class="there input"  id="title" > search By title </button><br>
+        <button onclick=" moodSearch(this.id)" class="there input"  id="category" > search By category</button>
+    </div>
+</div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>tatle</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>total</th>
+                <th>caregory</th>
+                <th>ubdate</th>
+                <th>delete</th>
+               
+
+            </tr>
+
+            <tbody id="tbody">
+                
+               
+            </tbody>
+
+
+        </table>
+
+     
+   
+        
+
+
+
+
+
+    </div>
+    
+
+
+    <script src="app.js"></script>
+</body>
+</html>

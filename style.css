@@ -1,0 +1,156 @@
+body {
+    background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+    overflow-x: hidden;
+    background: white;
+}
+
+h2 {
+    color: #4a5568;
+    font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 6px;
+}
+
+.project {
+    width: 100%;
+    height: 100vh;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.one {
+    width: 50vw;
+    height: 4vh;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #e2e8f0;
+}
+
+.two {
+    width: 12vw;
+    height: 4vh;
+    border-radius: 10px;
+    border: none;
+    background-color: #e2e8f0;
+}
+
+.there {
+    width: 50vw;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background: #2b6cb0;
+    color: #ffffff;
+    border: none;
+}
+
+.button {
+    width: 50vw;
+    height: 40px;
+    background: #2b6cb0;
+    color: #ffffff;
+    border-radius: 10px;
+    transition: 1s;
+    border: none;
+}
+
+#button {
+    background: #2b6cb0;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+#btn1 {
+    background: #3182ce;
+    width: 40%;
+    padding: 7px;
+    border-radius: 8px;
+    margin: 5px;
+    border: none;
+    color: #ffffff;
+    transition: 2s;
+}
+
+table {
+    color: #4a5568;
+    justify-content: center;
+    font-size: large;
+    margin: auto;
+    width: 50vw;
+    
+}
+
+tbody {
+    color: #2d3748;
+    background-color: #2b6cb0;
+}
+
+.black{
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    border-radius:70%;
+    position: absolute;
+    left: 20vw;
+    top: 12vh;
+    cursor: pointer;
+}
+
+#total {
+    color: #4a5568;
+    background: #edf2f7;
+}
+
+#total::before {
+    content: 'Total:';
+}
+
+
+
+th {
+    background-color: #e2e8f0;
+}
+
+td {
+    background-color: #f7fafc;
+}
+
+@media(max-width:480px) {
+    
+    body{
+        overflow-x: hidden;
+    }
+    .project {
+        width: 100%;
+        height: 100%;
+        margin-top: 5vh;
+    
+    }
+    .topBody {
+        width: 100%;
+       
+    }
+    .input {
+        width: 80%;
+    }
+    .input1 {
+        width: 20%;
+    }
+    table{
+        font-size: 12px;
+        width: 80vw;
+    }
+
+    .black{
+        
+        top: 6vh;
+        left:2vw;
+    }
+.two{
+    width: 15vw;
+}
+   
+}
