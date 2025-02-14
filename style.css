@@ -29,8 +29,9 @@ h2 {
 }
 
 .two {
-    width: 12vw;
+    width: 50vw;
     height: 30px;
+    padding: 5px;
     border-radius: 10px;
     border: none;
     background-color: #e2e8f0;
@@ -91,16 +92,6 @@ tbody {
 }
 
 
-#total {
-    color: #4a5568;
-    background: #edf2f7;
-}
-
-#total::before {
-    content: 'Total:';
-}
-
-
 
 th {
     background-color: #e2e8f0;
@@ -129,15 +120,11 @@ td {
         width: 80%;
     }
     .input1 {
-        width: 20%;
+        width: 80%;
     }
     table{
         font-size: 12px;
         width: 80vw;
     }
-
-.two{
-    width: 15vw;
-}
    
 }

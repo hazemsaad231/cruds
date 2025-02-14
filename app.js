@@ -1,4 +1,3 @@
- // gettotal *
 // create  *
 // save localstorage *
 // clear inputs  *
@@ -12,9 +11,6 @@
 
 let title = document.getElementById('title')
 let price = document.getElementById('price')
-let taxes = document.getElementById('taxes')
-let ads = document.getElementById('ads')
-let total = document.getElementById('total')
 let count = document.getElementById('count')
 let create = document.getElementById('create')
 let category = document.getElementById('category')
@@ -22,13 +18,7 @@ let search = document.getElementById('search')
 let moodUp ="create"
 let temp;
 
-//1
 
-function getTotal(){
-    let result = +price.value - +taxes.value - +ads.value
-    total.innerHTML = result ; 
-
-}
 
 //2
 
@@ -44,9 +34,6 @@ create.onclick = function getData(){
     let obj = {
         title : title.value ,
         price : price.value ,
-        taxes : taxes.value,
-        ads : ads.value ,
-        total : total.innerHTML,
         count : count.value,
         category : category.value,
         
@@ -54,7 +41,6 @@ create.onclick = function getData(){
     }
    
         if(moodUp=="create"){
-            if(obj.innerHTML!==null){
              if(obj.count > 1){
                 for(let i =0 ; i < obj.count ; i++){
                     Data.push(obj)
@@ -62,7 +48,7 @@ create.onclick = function getData(){
             }else{
                 Data.push(obj)
             }
-            }
+            
         }else{
             Data[temp]=obj
             moodUp ="update"
@@ -82,9 +68,6 @@ create.onclick = function getData(){
 function clear(){
     title.value = ""
     price.value = ""
-    taxes.value = ""
-    ads.value = ""
-    total.innerHTML =""
     count.value =""
     category.value =""
 
@@ -101,9 +84,6 @@ function read(){
         <td>${i+1}</td>
         <td>${Data[i].title}</td>
         <td>${Data[i].price}</td>
-        <td>${Data[i].taxes}</td>
-        <td${Data[i].ads}></td>
-        <td>${Data[i].total}</td>
         <td>${Data[i].category}</td>
         <td><button id = "button" onclick = " updateData(${i})">ubdate</button></td>
         <td><button id ='button'  onclick = "Delete(${i})"> delete</button></td>
@@ -142,9 +122,6 @@ function updateData(i){
 
     title.value = Data[i].title;
     price.value = Data[i].price;
-    taxes.value = Data[i].taxes;
-    ads.value = Data[i].ads;
-    getTotal();
     category.value = Data[i].category;
     count.style.display="none";
     create.innerHTML="ubdate"
@@ -185,9 +162,6 @@ function searchItems(value){
                 <td>${i+1}</td>
                 <td>${Data[i].title}</td>
                 <td>${Data[i].price}</td>
-                <td>${Data[i].taxes}</td>
-                <td${Data[i].ads}></td>
-                <td>${Data[i].total}</td>
                 <td>${Data[i].category}</td>
                 <td><button id = "button" onclick = " updateData(${i})">ubdate</button></td>
                 <td><button id ='button'  onclick = "Delete(${i})"> delete</button></td>
@@ -211,9 +185,6 @@ function searchItems(value){
                 <td>${i+1}</td>
                 <td>${Data[i].title}</td>
                 <td>${Data[i].price}</td>
-                <td>${Data[i].taxes}</td>
-                <td${Data[i].ads}></td>
-                <td>${Data[i].total}</td>
                 <td>${Data[i].category}</td>
                 <td><button id = "button" onclick = " updateData(${i})">ubdate</button></td>
                 <td><button id ='button'  onclick = "Delete(${i})"> delete</button></td>
