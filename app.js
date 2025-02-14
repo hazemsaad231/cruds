@@ -54,18 +54,19 @@ create.onclick = function getData(){
     }
    
         if(moodUp=="create"){
-            if(obj.count > 1){
+            if(obj.innerHTML!==null){
+             if(obj.count > 1){
                 for(let i =0 ; i < obj.count ; i++){
                     Data.push(obj)
                 }
             }else{
                 Data.push(obj)
             }
+            }
         }else{
             Data[temp]=obj
             moodUp ="update"
             create.innerHTML="create"
-            count.style.display = "block"
         }
    
   
@@ -88,21 +89,6 @@ function clear(){
     category.value =""
 
 }
-let black = document.getElementById("black")
-
-black.addEventListener("click",()=>{
-
-    if(document.body.style.backgroundColor == "white"){
-        document.body.style.backgroundColor = "black"
-        black.style.backgroundColor = "white"
-
-}else{
-    document.body.style.backgroundColor = "white"
-    black.style.backgroundColor = "black"
-}
-})
-
-
 
 
 function read(){

@@ -20,17 +20,17 @@ h2 {
 
 .one {
     width: 50vw;
-    height: 4vh;
+    height: 30px;
     padding: 5px;
-    margin: 10px;
     border-radius: 10px;
+    margin: 8px;
     border: none;
     background-color: #e2e8f0;
 }
 
 .two {
     width: 12vw;
-    height: 4vh;
+    height: 30px;
     border-radius: 10px;
     border: none;
     background-color: #e2e8f0;
@@ -52,7 +52,6 @@ h2 {
     background: #2b6cb0;
     color: #ffffff;
     border-radius: 10px;
-    transition: 1s;
     border: none;
 }
 
@@ -61,6 +60,7 @@ h2 {
     border: none;
     border-radius: 8px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 #btn1 {
@@ -83,21 +83,13 @@ table {
     
 }
 
+
+
 tbody {
     color: #2d3748;
     background-color: #2b6cb0;
 }
 
-.black{
-    background-color: black;
-    width: 25px;
-    height: 25px;
-    border-radius:70%;
-    position: absolute;
-    left: 20vw;
-    top: 12vh;
-    cursor: pointer;
-}
 
 #total {
     color: #4a5568;
@@ -144,11 +136,6 @@ td {
         width: 80vw;
     }
 
-    .black{
-        
-        top: 6vh;
-        left:2vw;
-    }
 .two{
     width: 15vw;
 }
