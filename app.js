@@ -31,10 +31,22 @@ if (localStorage.prodct != null){
     Data = []
 }
 
+image.addEventListener('change', function () {
+    let file = this.files[0];
+    if (file) {
+        let reader = new FileReader();
+        reader.onload = function () {
+            localStorage.setItem("imageData", reader.result); // حفظ الصورة في localStorage
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+
 create.onclick = function getData(){
     let obj = {
         title : title.value ,
-        image : image.value ,
+        image: localStorage.getItem("imageData"), // استرجاع الصورة من localStorage
         price : price.value ,
         count : count.value,
         category : category.value,
@@ -62,7 +74,6 @@ create.onclick = function getData(){
    
     clear()
     read()
-    totalPrice()
 
     localStorage.setItem('prodct',JSON.stringify(Data))
 }
@@ -86,7 +97,7 @@ function read(){
         <tr>
         <td>${i+1}</td>
         <td>${Data[i].title}</td>
-        <td>${Data[i].image}</td>
+        <td><img src="${Data[i].image}" style="width:50px;height:50px"/></td>
         <td>${Data[i].price}</td>
         <td>${Data[i].category}</td>
         <td><button id = "button" onclick = " updateData(${i})">ubdate</button></td>
@@ -125,7 +136,7 @@ function DeleteAll(){
 function updateData(i){
 
     title.value = Data[i].title;
-    image.value = Data[i].image;
+    image.value.src = Data[i].image;
     price.value = Data[i].price;
     category.value = Data[i].category;
     count.style.display="none";
@@ -166,7 +177,7 @@ function searchItems(value){
                 <tr>
                 <td>${i+1}</td>
                 <td>${Data[i].title}</td>
-                <td>${Data[i].image}</td>
+                <td><img src="${Data[i].image}" style="width:100px;height:100px"/></td>
                 <td>${Data[i].price}</td>
                 <td>${Data[i].category}</td>
                 <td><button id = "button" onclick = " updateData(${i})">ubdate</button></td>
@@ -190,7 +201,7 @@ function searchItems(value){
                 <tr>
                 <td>${i+1}</td>
                 <td>${Data[i].title}</td>
-                <td>${Data[i].image}</td>
+                <td><img src="${Data[i].image}" style="width:100px;height:100px"/></td>
                 <td>${Data[i].price}</td>
                 <td>${Data[i].category}</td>
                 <td><button id = "button" onclick = " updateData(${i})">ubdate</button></td>
