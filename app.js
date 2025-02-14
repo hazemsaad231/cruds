@@ -10,6 +10,7 @@
 
 
 let title = document.getElementById('title')
+let image = document.getElementById('image')
 let price = document.getElementById('price')
 let count = document.getElementById('count')
 let create = document.getElementById('create')
@@ -33,6 +34,7 @@ if (localStorage.prodct != null){
 create.onclick = function getData(){
     let obj = {
         title : title.value ,
+        image : image.value ,
         price : price.value ,
         count : count.value,
         category : category.value,
@@ -67,6 +69,7 @@ create.onclick = function getData(){
 
 function clear(){
     title.value = ""
+    image.value = ""
     price.value = ""
     count.value =""
     category.value =""
@@ -83,6 +86,7 @@ function read(){
         <tr>
         <td>${i+1}</td>
         <td>${Data[i].title}</td>
+        <td>${Data[i].image}</td>
         <td>${Data[i].price}</td>
         <td>${Data[i].category}</td>
         <td><button id = "button" onclick = " updateData(${i})">ubdate</button></td>
@@ -121,6 +125,7 @@ function DeleteAll(){
 function updateData(i){
 
     title.value = Data[i].title;
+    image.value = Data[i].image;
     price.value = Data[i].price;
     category.value = Data[i].category;
     count.style.display="none";
@@ -161,6 +166,7 @@ function searchItems(value){
                 <tr>
                 <td>${i+1}</td>
                 <td>${Data[i].title}</td>
+                <td>${Data[i].image}</td>
                 <td>${Data[i].price}</td>
                 <td>${Data[i].category}</td>
                 <td><button id = "button" onclick = " updateData(${i})">ubdate</button></td>
@@ -184,6 +190,7 @@ function searchItems(value){
                 <tr>
                 <td>${i+1}</td>
                 <td>${Data[i].title}</td>
+                <td>${Data[i].image}</td>
                 <td>${Data[i].price}</td>
                 <td>${Data[i].category}</td>
                 <td><button id = "button" onclick = " updateData(${i})">ubdate</button></td>

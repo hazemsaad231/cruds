@@ -17,15 +17,12 @@
         <h2>system</h2> 
 
 
-    <input class="one input" type="text" placeholder="title" id="title">
+    <input class="one input" type="text" placeholder="name" id="title">
 
     <div>
+        <input class="two input1" type="text" placeholder="image" id="image">
 
         <input class="two input1" type="number" placeholder="price" id="price">
-        <!-- <input class="two input1" type="number" placeholder="taxes" id="taxes" onkeyup="getTotal()">
-        <input class="two input1" type="number" placeholder="ads" id="ads"  onkeyup="getTotal()">
-        <input class="two input1" type="number" placeholder= ""  id="tprice">
-        <small id="total"></small> -->
     </div>
     <input class="one input" type="number" placeholder="count" id="count">
     <input class="one input" type="text" placeholder="category" id="category">
@@ -34,7 +31,7 @@
     <div id="btn"></div>
    
     <div> 
-        <button onclick=" moodSearch(this.id)" class="there input"  id="title" > search By title </button><br>
+        <button onclick=" moodSearch(this.id)" class="there input"  id="title" > search By name </button><br>
         <button onclick=" moodSearch(this.id)" class="there input"  id="category" > search By category</button>
     </div>
 </div>
@@ -42,15 +39,11 @@
             <tr>
                 <th>id</th>
                 <th>title</th>
+                <th>image</th>
                 <th>price</th>
-                <!-- <th>taxes</th>
-                <th>ads</th>
-                <th>total</th> -->
                 <th>caregory</th>
                 <th>ubdate</th>
                 <th>delete</th>
-               
-
             </tr>
 
             <tbody id="tbody">
