@@ -29,6 +29,7 @@ if (localStorage.prodct != null){
       Data = JSON.parse(localStorage.prodct)
 }else{
     Data = []
+    console.log(Data)
 }
 
 image.addEventListener('change', function () {
@@ -44,23 +45,31 @@ image.addEventListener('change', function () {
 
 
 create.onclick = function getData(){
+
     let obj = {
         title : title.value ,
         image: localStorage.getItem("imageData"), // استرجاع الصورة من localStorage
         price : price.value ,
         count : count.value,
         category : category.value,
-        
-
     }
+   console.log(obj)
+
+   if(obj.title !="" && obj.image !=null && obj.price !="" && obj.count !="" && obj.category !=""){
+
    
         if(moodUp=="create"){
-             if(obj.count > 1){
-                for(let i =0 ; i < obj.count ; i++){
-                    Data.push(obj)
-                }
+             if(obj.count > 1 ){
+              
+                    for(let i =0 ; i < obj.count ; i++){
+                        Data.push(obj)
+                       
+                    }
+                
+              
             }else{
                 Data.push(obj)
+
             }
             
         }else{
@@ -68,12 +77,11 @@ create.onclick = function getData(){
             moodUp ="update"
             create.innerHTML="create"
         }
-   
-  
-    
-   
-    clear()
-    read()
+    }else{
+        alert("please enter all data")
+    }
+     clear()
+     read()
 
     localStorage.setItem('prodct',JSON.stringify(Data))
 }
