@@ -31,13 +31,15 @@ if (localStorage.prodct != null){
     Data = []
     console.log(Data)
 }
+let uploadedImage = '';
+
 
 image.addEventListener('change', function () {
     let file = this.files[0];
     if (file) {
         let reader = new FileReader();
         reader.onload = function () {
-            localStorage.setItem("imageData", reader.result); // حفظ الصورة في localStorage
+            uploadedImage = reader.result;
         };
         reader.readAsDataURL(file);
     }
@@ -48,14 +50,14 @@ create.onclick = function getData(){
 
     let obj = {
         title : title.value ,
-        image: localStorage.getItem("imageData"), // استرجاع الصورة من localStorage
+        image : uploadedImage ,
         price : price.value ,
         count : count.value,
         category : category.value,
     }
    console.log(obj)
 
-   if(obj.title !="" && obj.image !=null && obj.price !="" && obj.count !="" && obj.category !=""){
+   if(obj.title !="" && obj.image !="" && obj.price !="" && obj.category !=""){
 
    
         if(moodUp=="create"){
@@ -83,6 +85,8 @@ create.onclick = function getData(){
      clear()
      read()
 
+image.value = null
+uploadedImage = '';
     localStorage.setItem('prodct',JSON.stringify(Data))
 }
 
@@ -144,7 +148,7 @@ function DeleteAll(){
 function updateData(i){
 
     title.value = Data[i].title;
-    image.value.src = Data[i].image;
+    uploadedImage = Data[i].image;
     price.value = Data[i].price;
     category.value = Data[i].category;
     count.style.display="none";
